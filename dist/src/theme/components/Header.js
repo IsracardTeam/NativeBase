@@ -58,7 +58,24 @@ shadowColor:null,
 shadowOffset:null,
 shadowRadius:null,
 shadowOpacity:null,
-borderBottomWidth:null},
+borderBottomWidth:null,
+"NativeBase.Left":{
+flex:0.3},
+
+"NativeBase.Right":{
+flex:0.3},
+
+"NativeBase.Body":{
+flex:1,
+"NativeBase.Segment":{
+marginRight:0,
+alignSelf:'center',
+"NativeBase.Button":{
+paddingLeft:0,
+paddingRight:0}}}},
+
+
+
 
 "NativeBase.Button":{
 justifyContent:"center",
@@ -66,7 +83,7 @@ alignSelf:"center",
 alignItems:"center",
 ".transparent":{
 "NativeBase.Text":{
-color:variables.toolbarBtnColor,
+color:variables.toolbarBtnTextColor,
 fontWeight:"600"},
 
 "NativeBase.Icon":{
@@ -98,7 +115,7 @@ alignSelf:"center"},
 "NativeBase.Input":{
 alignSelf:"center",
 lineHeight:24,
-height:variables.searchBarHeight},
+height:variables.searchBarInputHeight},
 
 alignSelf:"center",
 alignItems:"center",
@@ -139,7 +156,7 @@ marginRight:5,
 marginLeft:2},
 
 "NativeBase.Text":{
-color:variables.toolbarBtnColor,
+color:variables.toolbarBtnTextColor,
 fontSize:17,
 marginLeft:2,
 lineHeight:21},
@@ -169,7 +186,7 @@ marginRight:2,
 marginLeft:2},
 
 "NativeBase.Text":{
-color:variables.toolbarBtnColor,
+color:variables.toolbarBtnTextColor,
 fontSize:17,
 top:platform==="ios"?undefined:-1.5},
 
@@ -232,7 +249,7 @@ marginRight:2,
 marginLeft:5},
 
 "NativeBase.Text":{
-color:variables.toolbarBtnColor,
+color:variables.toolbarBtnTextColor,
 fontSize:17,
 lineHeight:21},
 
@@ -265,7 +282,7 @@ marginLeft:2,
 marginRight:2},
 
 "NativeBase.Text":{
-color:variables.toolbarBtnColor,
+color:variables.toolbarBtnTextColor,
 fontSize:17,
 top:platform==="ios"?undefined:-1.5},
 
@@ -299,7 +316,7 @@ justifyContent:"center",
 paddingTop:platform==="ios"?variables.isIphoneX?39:15:0,
 borderBottomWidth:platform==="ios"?1/_reactNative.PixelRatio.getPixelSizeForLayoutSize(1):0,
 borderBottomColor:variables.toolbarDefaultBorder,
-height:variables.toolbarHeight,
+height:variables.platform==="ios"&&variables.platformStyle==="material"?variables.toolbarHeight+_reactNative.StatusBar.height:variables.toolbarHeight,
 elevation:3,
 shadowColor:platformStyle==="material"?"#000":undefined,
 shadowOffset:platformStyle==="material"?{width:0,height:2}:undefined,
